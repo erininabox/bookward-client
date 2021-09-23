@@ -8,3 +8,5 @@ function LandingHeader() {
         </div>
     )
 }
+
+export default LandingHeader

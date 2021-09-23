@@ -6,3 +6,5 @@ function SchoolHeader() {
         </div>
     )
 }
+
+export default SchoolHeader
