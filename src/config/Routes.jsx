@@ -1,16 +1,14 @@
 import { Switch, Route } from 'react-router-dom';
-import BooksList from '../components/BooksList';
-import Landing from '../pages/Landing';
+import HomePage from '../pages/HomePage';
+import Catalog from '../pages/Catalog';
+import BookShowPage from '../pages/BookShowPage';
 
 function Routes() {
     return (
         <Switch>
-            <Route path="/books">
-                <BooksList />
-            </Route>
-            <Route path="/">
-                <Landing />
-            </Route>
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/books' component={Catalog} />
+            <Route path='/books/:id' render={(props) => <BookShowPage {...props} />} />
         </Switch>
     )
 }
