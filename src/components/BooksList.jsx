@@ -1,9 +1,9 @@
-import CatalogSort from '../components/CatalogSort'
+// import CatalogSort from '../components/CatalogSort'
 
 function BooksList() {
     return(
         <div className='books-list'>
-            <CatalogSort />
+            {/* <CatalogSort /> */}
             Individual books here.
         </div>
     )

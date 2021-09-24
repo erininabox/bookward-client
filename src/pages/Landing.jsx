@@ -1,5 +1,5 @@
 import LandingHeader from '../components/LandingHeader';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import LandingContent from '../components/LandingContent';
 
 function Landing(){
@@ -7,7 +7,7 @@ function Landing(){
         <div className='landing-page'>
             <LandingHeader />
             <LandingContent />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
