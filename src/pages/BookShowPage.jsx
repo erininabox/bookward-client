@@ -7,7 +7,8 @@ class BookShowPage extends Component {
         title: '',
         author: '',
         yearPub: '',
-        description: ''
+        description: '',
+        quantity: 0
     }
 
     componentDidMount() {
@@ -19,7 +20,8 @@ class BookShowPage extends Component {
                 title: data.title,
                 author: data.author,
                 yearPub: data.yearPub,
-                description: data.description
+                description: data.description,
+                quantity: data.quantity
             })
         })
     }
@@ -35,6 +37,7 @@ class BookShowPage extends Component {
                 <p>{this.state.author}</p>
                 <p>Published: {this.state.yearPub}</p>
                 <p>{this.state.description}</p>
+                <p>{this.state.quantity}</p>
             </main>
         )
     }
