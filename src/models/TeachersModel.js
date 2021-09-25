@@ -22,13 +22,13 @@ class TeachersModel {
     }
 
     static addTeacher(teacherObj) {
-        return axios.post(`${url}/add`, teacherObj).then((teacherObj) => {
-            this.setState(teacherObj)
-            console.log(teacherObj)
-        })
-        .catch(err => {
-            console.log(err)
-        })
+        return axios.post(`${url}/add`, teacherObj)
+        // .then((response) => {
+        //     return response.json()
+        // })
+        // .catch((err) => {
+        //     console.log(err);
+        // })
     }
 }
 
