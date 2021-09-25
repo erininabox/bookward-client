@@ -3,7 +3,6 @@ import BooksModel from '../models/BooksModel';
 
 class BookShowPage extends Component {
     state = {
-        bookID: '',
         title: '',
         author: '',
         yearPub: '',
@@ -16,7 +15,6 @@ class BookShowPage extends Component {
 
         BooksModel.show(bookID).then((data) => {
             this.setState({
-                bookID: data.bookID,
                 title: data.title,
                 author: data.author,
                 yearPub: data.yearPub,
@@ -31,14 +29,14 @@ class BookShowPage extends Component {
         console.log(this.props);
 
         return(
-            <main>
-                <h1>Book Show Page</h1>
-                <h3>{this.state.title}</h3>
-                <p>{this.state.author}</p>
-                <p>Published: {this.state.yearPub}</p>
-                <p>{this.state.description}</p>
-                <p>{this.state.quantity}</p>
-            </main>
+                <main>
+                    <h1>Book Show Page</h1>
+                    <h3>{this.state.title}</h3>
+                    <p>{this.state.author}</p>
+                    <p>Published: {this.state.yearPub}</p>
+                    <p>{this.state.description}</p>
+                    <p>{this.state.quantity}</p>
+                </main>
         )
     }
 }

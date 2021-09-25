@@ -2,6 +2,7 @@ import { Component } from 'react';
 import BooksModel from '../models/BooksModel'
 import Book from '../components/Book'
 
+
 class Catalog extends Component {
     state = {
         bookData: []
@@ -25,10 +26,12 @@ class Catalog extends Component {
 
     render() {
         return (
-            <main>
-                <h1>All Books</h1>
-                { this.renderBooks() }
-            </main>
+            <div>
+                <main>
+                    <h1>All Books</h1>
+                    { this.renderBooks() }
+                </main>
+            </div>
         )
     }
 }

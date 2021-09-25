@@ -1,8 +1,12 @@
+
+
 function HomePage() {
     return (
-        <main>
-            <h1>Bookward</h1>
-        </main>
+        <div>
+            <main>
+                <h1>Bookward</h1>
+            </main>
+        </div>
     )
 }
 
