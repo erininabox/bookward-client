@@ -1,3 +1,4 @@
+import axios from "axios";
 const url = 'http://localhost:4000/books';
 
 class BooksModel {
@@ -14,6 +15,14 @@ class BooksModel {
     static show(bookID) {
         return fetch(`${url}/${bookID}`)
             .then((response) => response.json())
+    }
+
+    static delete(bookID) {
+        return axios.delete(`${url}/${bookID}`)
+    }
+
+    static addBookSet(bookObj) {
+        return axios.post(`${url}/add`, bookObj)
     }
 }
 

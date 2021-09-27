@@ -1,11 +1,6 @@
-// display a form
-// onSubmit make an axios call that creates a brand new teacher (post request, passing in the teacher data in the req.body)
-// redirect to the teachers index page
-
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import TeachersModel from '../models/TeachersModel';
-// import { Link } from "react-router-dom";
 
 class TeacherCreatePage extends Component {
     constructor(props){
@@ -23,8 +18,6 @@ class TeacherCreatePage extends Component {
     onInputChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
-            [event.target.name]: event.target.value,
-            [event.target.name]: event.target.value,
             isRedirectClicked: false
         })
     }
@@ -39,13 +32,11 @@ class TeacherCreatePage extends Component {
         console.log(teacherObj)
 
         TeachersModel.addTeacher(teacherObj)
-            // .then(<Redirect to="/teachers"/>)
-            // .catch(err => {console.log(err)})
-            // return <Redirect to="/teachers"/>  
-            this.setState({
-                ...teacherObj,
-                isRedirectClicked: true
-            })
+
+        this.setState({
+            ...teacherObj,
+            isRedirectClicked: true
+        })
         }
 
     render() {
