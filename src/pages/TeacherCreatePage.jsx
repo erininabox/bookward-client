@@ -43,14 +43,17 @@ class TeacherCreatePage extends Component {
         if (!this.state.isRedirectClicked) {
             return(
                 <div>
+                    <h1>Add a Teacher</h1>
                     <form onSubmit={ this.onFormSubmit }>
+                        <div className="form">
                         <p>Last Name:</p>
                         <p><input type="text" name='lastName' onChange={this.onInputChange} value={this.state.lastName}></input></p>
                         <p>First Name:</p>
                         <p><input type="text" name='firstName' onChange={this.onInputChange} value={this.state.firstName}></input></p>
                         <p>Department:</p>
                         <p><input type="text" name='department' onChange={this.onInputChange} value={this.state.department}></input></p>
-                        <p><button type="submit">Submit</button></p>
+                        <p><button className="submit-btn" type="submit">Submit</button></p>
+                        </div>
                     </form>
                 </div>
             )

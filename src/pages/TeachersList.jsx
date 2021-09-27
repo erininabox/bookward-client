@@ -38,13 +38,13 @@ class TeachersList extends Component {
 
     render() {
         return (
-            <div>
-                <main>
+            <main>
+                <div className="all-teachers-header">
                     <h1>All Teachers</h1>
-                    <Link to="/teachers/add">Add a teacher</Link>
+                    <Link className="faux-btn" to="/teachers/add">Add a teacher</Link>
+                </div>
                     { this.renderTeachers() }
-                </main>
-            </div>
+            </main>
         )
     }
 }

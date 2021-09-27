@@ -24,13 +24,16 @@ class Book extends Component {
 
     render() {
         return (
-            <div>
-                <h3><Link to={`/books/${this.props.bookObj._id}`}>{this.props.bookObj.title}</Link></h3>
-                <p>by {this.props.bookObj.author}</p>
-                <p>Quantity: {this.props.bookObj.quantity}</p>
-                <p>Published: {this.props.bookObj.yearPub}</p>
-                <p>{this.props.bookObj.description}</p>
-                <p><button className="delete-btn" onClick={this.handleDelete}>Delete</button></p>
+            <div className="book">
+                <div className="booklead">
+                    <h3><Link to={`/books/${this.props.bookObj._id}`}>{this.props.bookObj.title}</Link></h3>
+                    <div>by {this.props.bookObj.author}</div>
+                    <div>Quantity: {this.props.bookObj.quantity}</div>
+                    <div>Published: {this.props.bookObj.yearPub}</div>
+                <button className="delete-btn" onClick={this.handleDelete}>Delete</button>
+                </div>
+                <div className="description">{this.props.bookObj.description}</div>
+
             </div>
         )}
 }

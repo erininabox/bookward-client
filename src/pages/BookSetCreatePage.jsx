@@ -48,6 +48,7 @@ class BookSetCreatePage extends Component {
             return(
                 <div>
                     <form onSubmit={ this.onFormSubmit }>
+                        <div className="form">
                         <p>Title:</p>
                         <p><input type="text" name='title' onChange={this.onInputChange} value={this.state.title}></input></p>
                         <p>Author:</p>
@@ -58,7 +59,8 @@ class BookSetCreatePage extends Component {
                         <p><input type="text" name='description' onChange={this.onInputChange} value={this.state.description}></input></p>
                         <p>Quantity:</p>
                         <p><input type="number" name='quantity' onChange={this.onInputChange} value={this.state.quantity}></input></p>
-                        <p><button type="submit">Submit</button></p>
+                        <p><button className="submit-btn" type="submit">Submit</button></p>
+                        </div>
                     </form>
                 </div>
             )

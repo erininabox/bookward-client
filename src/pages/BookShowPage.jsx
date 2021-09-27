@@ -29,14 +29,17 @@ class BookShowPage extends Component {
         console.log(this.props);
 
         return(
-                <main>
-                    <h1>Book Show Page</h1>
+            <div className="book">
+                <div className="booklead">
                     <h3>{this.state.title}</h3>
-                    <p>{this.state.author}</p>
-                    <p>Published: {this.state.yearPub}</p>
-                    <p>{this.state.description}</p>
-                    <p>{this.state.quantity}</p>
-                </main>
+                    <div>{this.state.author}</div>
+                    <div>Published: {this.state.yearPub}</div>
+                    <div>{this.state.quantity}</div>
+                    <div className="faux-btn">Edit book details</div>
+                    <div className="faux-btn">Check-out</div>
+                </div>
+                    <div>{this.state.description}</div>
+            </div>
         )
     }
 }

@@ -38,8 +38,10 @@ class Catalog extends Component {
         return (
             <div>
                 <main>
+                    <div className="all-books-header">
                     <h1>All Books</h1>
-                    <Link to="/books/add">Add a Book Set</Link>
+                    <Link className="faux-btn" to="/books/add">Add a Book Set</Link>
+                    </div>
                     { this.renderBooks() }
                 </main>
             </div>

@@ -2,14 +2,14 @@ import {Link} from 'react-router-dom';
 
 function Header(){
     return(
-        <header>
-            <img src='../images/BookWard.png' alt="logo" />
-            <nav>
-            <Link to='/'>Home</Link>
-            <Link to='/books'>Books</Link>
-            <Link to='/teachers'>Teachers</Link>
+        <div className="header">
+            <img src="https://i.ibb.co/8YXzs7p/BookWard.png" alt="BookWard" border="0" className="logo" />
+            <nav className="nav">
+            <Link className="link" to='/'>Bookward</Link>
+            <Link className="link" to='/books'>Books</Link>
+            <Link className="link" to='/teachers'>Teachers</Link>
             </nav>
-        </header>
+        </div>
     )
 }
 

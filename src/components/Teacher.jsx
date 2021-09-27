@@ -22,10 +22,19 @@ class Teacher extends Component {
 
     render() {
         return (
-            <div>
-                <p>Teacher: <Link to={`/teachers/${this.props.teacherObj._id}`}>{this.props.teacherObj.firstName} {this.props.teacherObj.lastName}</Link></p>
-                <p>{this.props.teacherObj.department}</p>
-                <p><button className="delete-btn" onClick={this.handleDelete}>Delete</button></p>
+            <div className="teacher">
+                <div className="teacher-name-dpt">
+                    <h4>Teacher:</h4>
+                    <p>
+                    <Link to={`/teachers/${this.props.teacherObj._id}`}>{this.props.teacherObj.firstName} {this.props.teacherObj.lastName}</Link></p>
+                    <p>{this.props.teacherObj.department}</p>
+                </div>
+                <div className="borrowed-book-set">
+                    <h4>Checked out:</h4>
+                    <p><Link to='/books/614e01a5c94fd8acd118fe1c'>Anne of Avonlea</Link></p>
+                    <p>Due: 10/30/2021</p>
+                </div>
+                <button className="delete-btn" onClick={this.handleDelete}>Delete</button>
                 {/* Look up 'modal' when you implement the pop-up edit feature later */}
             </div>
     )}
